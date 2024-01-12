@@ -10,6 +10,7 @@
     <h2>About file</h2>
 
     <a href="/">Home</a>
+    <a href="/compact">Compact</a>
     
 </body>
 </html>

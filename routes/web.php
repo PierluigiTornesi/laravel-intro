@@ -26,9 +26,34 @@ Route::get('/', function () {
             'Paperino'
         ],
     ];
-    return view('home', $data);
+    return view('home.index', $data);
 });
 
 Route::get('/about', function(){
-    return view('about');
+    return view('home.about');
+});
+
+
+//con compact non serve dover creare $data
+//scrivo direttamente il nome delle variabili sotto forma di stringa e posso utilizzarle cosi come sono nel rispettivo file
+Route::get('/compact', function(){
+    $title = 'Example of compact';
+    $name = 'Pierluigi';
+    $like_blade = true;
+    $students = [
+        [
+            'name' => 'Pippo',
+            'lastname' => 'Bianchi',
+        ],
+        [
+            'name' => 'Pluto',
+            'lastname' => 'Neri',
+        ],
+        [
+            'name' => 'Paperino',
+            'lastname' => 'Verdi',
+        ]
+    ];
+
+    return view('home.compact',compact('title','name','like_blade','students'));
 });
