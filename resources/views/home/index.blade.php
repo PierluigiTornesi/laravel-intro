@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <a href="/about">About us</a>
+    @include('partials.header')
 
     <h1>{{$title}}</h1>
 
@@ -18,5 +18,7 @@
             <li>{{$student}}</li>
         @endforeach
     </ul>
+
+    <a href="/about">About us</a>
 </body>
 </html>

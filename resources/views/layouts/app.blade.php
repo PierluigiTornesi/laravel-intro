@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-
     @include('partials.header')
 
-    <h2>About file</h2>
+    <main>
+        {{-- Qui andrá il contenuto individuale per ogni pagina --}}
+        @yield('content')
+    </main>
 
-    <a href="/">Home</a>
-    <a href="/compact">Compact</a>
-    
+    @include('partials.footer')
 </body>
 </html>

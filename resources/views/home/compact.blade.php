@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+
+@extends('layouts.app')
+
+@section('content')
     <h1>{{ $title }}</h1>
     <h2>Example by {{ $name }}</h2>
 
@@ -15,7 +10,7 @@
     @else
         <h3>Blade non mi piace</h3>
     @endif
-    
+
     <h3>Lista di studenti</h3>
     {{-- <ul>
         @foreach ($students as $student)
@@ -31,7 +26,7 @@
         @endforeach
     </ul> --}}
 
-    
+
 
     {{-- if con all'interno foreach --}}
     {{-- verifichiamo prima se esiste qualcosa dentro l'array , nel caso si stampa il valore , altrimenti messaggio che é vuoto --}}
@@ -77,7 +72,7 @@
             <li>Non abbiamo trovato nessuno studente</li>
         @endforelse
     </ul>
-
+        
     {{-- esempio di php --}}
     @php
         echo 'esempio di php su laravel';
@@ -85,7 +80,5 @@
 
 
     <h4>Go back to <a href="/about">about</a></h4>
-
-
-</body>
-</html>
+@endsection
+    
